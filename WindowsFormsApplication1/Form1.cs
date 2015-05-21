@@ -34,7 +34,7 @@ namespace WindowsFormsApplication1
                     tb[i, j].Visible = true;
                     tb[i, j].TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
                     tb[i, j].Top = tb[i, j].Height / 2;
-                    
+
                     if (i == 3 || i == 6)
                     {
                         x = i * space;
@@ -45,7 +45,7 @@ namespace WindowsFormsApplication1
                         x = i * space;
                     }
 
-                    if ((j == 3 || j == 6) && z==false)
+                    if ((j == 3 || j == 6) && z == false)
                     {
                         y = j * space;
                         yV += 10;
@@ -56,7 +56,7 @@ namespace WindowsFormsApplication1
                         y = j * space;
                     }
 
-                    tb[i, j].Location = new Point(x + 10 + xV, y+15 + yV);
+                    tb[i, j].Location = new Point(x + 10 + xV, y + 15 + yV);
 
                     tb[i, j].Width = 30;
                     tb[i, j].MaxLength = 1;
@@ -66,7 +66,7 @@ namespace WindowsFormsApplication1
                 }
             }
 
-            mediumToolStripMenuItem_Click(sender,e);
+            mediumToolStripMenuItem_Click(sender, e);
             button1_Click(sender, e);
             radioButton2.Checked = true;
         }
@@ -131,7 +131,7 @@ namespace WindowsFormsApplication1
                 int lya, lyb, lxa, lxb;
                 lya = lyb = lxa = lxb = 0;
                 for (int a = 0; a < 10; a++)
-                {       
+                {
                     av[a] = 1;
                 }
                 for (int a = 0; a < 9; a++)
@@ -172,7 +172,7 @@ namespace WindowsFormsApplication1
                 }
 
                 if (curr_x <= 2)
-                {                
+                {
                     lxa = 0;
                     lxb = 3;
                 }
@@ -286,7 +286,7 @@ namespace WindowsFormsApplication1
                     }
                 }
                 if (length == 0)
-                {  
+                {
                     return -1;
                 }
                 return array2[F(length)] + 1;
@@ -331,8 +331,10 @@ namespace WindowsFormsApplication1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            for(int a=0;a<9;a++){
-                for(int b=0;b<9;b++){
+            for (int a = 0; a < 9; a++)
+            {
+                for (int b = 0; b < 9; b++)
+                {
                     if (tb[a, b].Text != "")
                     {
                         if (ua[a, b].ToString() != tb[a, b].Text)
@@ -354,14 +356,17 @@ namespace WindowsFormsApplication1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            button2_Click(sender,e);
+            button2_Click(sender, e);
             for (int a = 0; a < 9; a++)
             {
                 for (int b = 0; b < 9; b++)
                 {
-                    if (tb[a, b].BackColor != Color.White) {
+                    if (tb[a, b].BackColor != Color.White)
+                    {
                         tb[a, b].Text = ua[a, b].ToString();
-                    }else{
+                    }
+                    else
+                    {
                         if (tb[a, b].Text == "")
                         {
                             tb[a, b].Text = ua[a, b].ToString();
@@ -370,7 +375,7 @@ namespace WindowsFormsApplication1
                     }
                 }
             }
-            
+
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -397,10 +402,9 @@ namespace WindowsFormsApplication1
             difficulty = 2;
         }
 
-       
+
     }
 }
 
- 
- 
-           
+
+
